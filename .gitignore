@@ -2,3 +2,5 @@
 *.pyc
 *.__init__.py
 .env
+how-to-run-as-daemon.txt
+logs/
