@@ -61,12 +61,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Kenny Maness.</h1>
     <p>Software Engineer and Musician.</p>
-    <img src="{% static 'media/bgimg-6.JPG' %}" alt="kenny-portrait" class="w3-image" width="992" height="1108">
+    <img src="{% static 'media/kenny-oddsnends.JPG' %}" alt="kenny-portrait" class="w3-image" width="992" height="1108">
   </header>
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">My Name</h2>
+    <h2 class="w3-text-light-grey">About me.</h2>
     <hr style="width:200px" class="w3-opacity">
     <p>Some text about me. Some text about me. Welcome to my website! I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
       ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
@@ -105,9 +105,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
     </div>
 
-    <button class="w3-button w3-light-grey w3-padding-large w3-section" href="{% static 'media/KManess_Resume_07-2023.pdf' %}" download="kenneth_maness_resume">
+    <a href="{% static 'media/KManess_Resume_07-2023.pdf' %}"
+      download="kenneth_maness_resume"
+      type="pdf"
+      class="w3-button w3-light-grey w3-padding-large w3-section">
       <i class="fa fa-download"></i> Download My Resume
-    </button>
+    </a>
     
     <!-- Grid for pricing tables -->
     <!--
@@ -151,8 +154,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     
     <!-- Testimonials -->
     <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
-    <img src="{% static 'media/thumbup.jpg' %}" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
+    <img src="{% static 'media/thumbup.jpg' %}" alt="Avatar" class="w3-left w3-circle w3-margin-right">
+    <p><span class="w3-large w3-margin-right">Joseph Schmoseph.</span> CEO at Mighty Schools.</p>
     <p>Kenny Maness saved us from a web disaster.</p><br>
     
     <img src="{% static 'media/thumbsup.jpg' %}" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
