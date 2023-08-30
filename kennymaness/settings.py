@@ -31,7 +31,7 @@ except KeyError as e:
     raise RuntimeError("Could not find a SECRET_KEY in environment") from e
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     #"kennymaness.com",
@@ -128,9 +128,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'portfolio/static/'
+# the name of the directory given to the url
+# for example, static files are requested at kennymaness.com/<STATIC_URL>filename.jpg
+STATIC_URL = 'static/'
 
-STATICFILES_DIR = [BASE_DIR / "static/"]
+STATICFILES_DIR = [BASE_DIR / "portfolio/static/"]
+
+# collectstatic moves static files into this directory
+# this resolves to /home/kennymaness/Development/portfolio/kennymaness/static/
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # STATICFILES_DIRS = [
