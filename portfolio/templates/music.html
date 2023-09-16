@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Kenny Maness</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+        body,h1 {font-family: "Raleway", sans-serif}
+        body, html {height: 100%}
+        .bgimg {
+          background-image: url("{% static 'media/progress_6.jpg' %}");
+          min-height: 100%;
+          background-position: center;
+          background-size: cover;
+        }
+        </style>
+    </head>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <!-- <div class="w3-display-topleft w3-padding-large w3-xlarge">
+  </div> -->
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top" style="background-color:whitesmoke;color: black;position: relative;text-align: center;">My Music</h1>
+    <!-- <hr class="w3-border-grey" style="margin:auto;width:40%"> -->
+    <p class="w3-large w3-center" style="background-color:whitesmoke;color: black;position: relative;text-align: center;"><a href="{% url 'portfolio' %}">Click here</a> to go back to the homepage.</p>
+  </div>
+</div>
+
+<!-- Portfolio Section -->
+<div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Music</h2>
+    <h3 class="w3-text-light-grey">Here's a collection of some of the music I've made.</h3>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <a href="https://kennymaness.bandcamp.com/track/my-shiny-teeth-and-me"><img src="{% static 'media/shiny_teeth_cover_art.jpeg' %}" style="width:100%"></a>
+        <a href="https://voyagemusic.bandcamp.com/album/lost-transmissions"><img src="{% static 'media/album-2.png' %}" style="width:100%"></a>
+        <a href="https://voyagemusic.bandcamp.com/album/coordinates"><img src="{% static 'media/album-3.png' %}" style="width:100%"></a>
+      </div>
+
+      <div class="w3-half">
+        <!-- <img src="{% static 'media/album-4.jpg' %}" style="width:100%"> -->
+        <a href="https://voyagemusic.bandcamp.com/album/from-stockholm-to-seattle"><img src="{% static 'media/album-5.png' %}" style="width:100%"></a>
+        <a href="https://kennymaness.bandcamp.com/album/everything-was-completely-silent-single"><img src="{% static 'media/album-6.jpg' %}" style="width:100%"></a>
+        <a href="https://kennymaness.bandcamp.com/album/somna"><img src="{% static 'media/album-7.png' %}" style="width:100%"></a>
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+</body>
+</html>
