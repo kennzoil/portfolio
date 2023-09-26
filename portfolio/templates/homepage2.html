@@ -16,6 +16,14 @@ body, html {
   line-height: 1.8;
 }
 
+.resumebutton {
+  border-radius: 15px;
+}
+.resumebutton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  transition-duration: 0.4s;
+}
+
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
   background-attachment: fixed;
@@ -38,7 +46,7 @@ body, html {
 
 /* Third image (Contact) */
 .bgimg-3 {
-  background-image: url("{% static 'media/kenny-midair.jpg' %}");
+  background-image: url("{% static 'media/kenny-float.jpg' %}");
   min-height: 400px;
 }
 
@@ -64,7 +72,7 @@ body, html {
     </a>
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-music"></i> MY MUSIC</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-music"></i> PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
     <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i> -->
@@ -74,7 +82,7 @@ body, html {
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">MY MUSIC</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
     <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
@@ -84,7 +92,7 @@ body, html {
 <div class="bgimg-1 w3-display-container" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
     <!-- <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span> -->
-    <img src="{% static 'media/transparentname.PNG' %}" style="max-width: 100%; height: auto;">
+    <img src="{% static 'media/transparentname.PNG' %}" style="max-width: 100%; height: auto;" class="w3-animate-top">
   </div>
 </div>
 
@@ -118,6 +126,11 @@ body, html {
         We have a board game collection that seems to grow on its own. On weekends, 
         you can find us kayaking, hosting D&D in our basement board game den, 
         or strolling leisurely through IKEA.</p>
+        <div>
+          <a href="{% static 'media/kenneth_maness_resume.pdf' %}" download="kenneth_maness_resume" type="pdf" class="w3-button w3-light-grey w3-padding-large w3-section resumebutton">
+          <i class="fa fa-download"></i> Download My Resume
+        </a>
+      </div>
     </div>
   </div>
   <p class="w3-large w3-center w3-padding-16">I'm really good at:</p>
@@ -163,8 +176,9 @@ body, html {
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY MUSIC</h3>
-  <p class="w3-center"><em>I've been writing and producing music independently since 2009.<br> Listen to one of my songs below, and click 'more' to see more of my music!</em></p><br>
+  <h3 class="w3-center">MUSIC</h3>
+  <p class="w3-center"><em>I've been writing and producing music independently since 2009.<br>Check out some of it below!</em></p>
+  <!-- <p class="w3-center"><em>Listen to one of my songs below, and click 'more' to see more of my music!</em></p><br> -->
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
@@ -176,7 +190,13 @@ body, html {
             <a href="https://voyagemusic.bandcamp.com/album/from-stockholm-to-seattle">From Stockholm to Seattle by Voyage</a>
         </iframe>
     </div>
-    <a href="{% url 'music' %}"><button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">MORE MUSIC</button></a>
+    <!-- <a href="{% url 'music' %}"><button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">MORE MUSIC</button></a> -->
+  </div>
+
+  <div class="w3-center">
+  <h3 class="w3-center">SOFTWARE</h3>
+  <p class="w3-center"><em>I'm also a software developer and proud LaunchCode graduate.<br>Check out some of my projects!</em></p>
+  <div class="github-card" data-github="kennzoil" data-width="400" data-height="318" data-theme="medium"></div><script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
   </div>
 </div>
 
@@ -198,8 +218,8 @@ body, html {
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
-  <p class="w3-center"><em>Feel free to get in touch!</em></p>
+  <h3 class="w3-center">GET IN TOUCH</h3>
+  <p class="w3-center"><em>Feel free to send me an email, or follow me on social media!</em></p>
 
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
@@ -207,19 +227,17 @@ body, html {
     </div>
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> St. Louis, US<br>
+        <!-- <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> St. Louis, US<br> -->
         <!-- <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br> -->
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: kenneth.l.maness@gmail.com<br>
+        <i class="fa fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <a href="https://www.linkedin.com/in/kennethmaness/" target="_blank">LinkedIn</a><br>
       </div>
       <div>
-        <a href="{% static 'media/kenneth_maness_resume.pdf' %}"
-        download="kenneth_maness_resume"
-        type="pdf"
-        class="w3-button w3-light-grey w3-padding-large w3-section">
-    <i class="fa fa-download"></i> Download My Resume
-    </a>
-      </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+        <a href="{% static 'media/kenneth_maness_resume.pdf' %}" download="kenneth_maness_resume" type="pdf" class="w3-button w3-light-grey w3-padding-large w3-section resumebutton">
+        <i class="fa fa-download"></i>Download My Resume
+      </a>
+    </div>
+      <!-- <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
       <form action="/action_page.php" target="_blank">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
@@ -233,7 +251,7 @@ body, html {
         <button class="w3-button w3-black w3-right w3-section" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
-      </form>
+      </form> -->
     </div>
   </div>
 </div>
